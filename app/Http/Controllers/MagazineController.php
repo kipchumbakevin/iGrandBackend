@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Magazine;
+use App\Models\NewsModel;
 use Illuminate\Http\Request;
 
 class MagazineController extends Controller
@@ -25,6 +26,7 @@ class MagazineController extends Controller
         $pod->title = $request->title;
         $pod->url =$filename;
         $pod->save();
+        return response()->json(['message'=>'Success'],201);
     }
     public function fetchAll(Request $request)
     {

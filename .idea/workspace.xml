@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95f70ddb-76f8-49fe-95e0-f4b586120323" name="Default Changelist" comment="" />
+    <list default="true" id="95f70ddb-76f8-49fe-95e0-f4b586120323" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MagazineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PodcastController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PodcastController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/fetchController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/fetchController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +20,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -139,8 +149,9 @@
   </component>
   <component name="ProjectId" id="1lNsbsiOiTIcFTtykIUPywvYIgl" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../LiveCode" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RunDashboard">
@@ -174,10 +185,33 @@
       <workItem from="1607448960956" duration="6081000" />
       <workItem from="1607495477970" duration="18831000" />
       <workItem from="1607927002156" duration="18011000" />
+      <workItem from="1610186495340" duration="85000" />
+      <workItem from="1620638495605" duration="833000" />
+      <workItem from="1623929067785" duration="4490000" />
+      <workItem from="1624958259702" duration="66000" />
+      <workItem from="1638452822960" duration="1198000" />
+      <workItem from="1638628072790" duration="168000" />
+      <workItem from="1645859859907" duration="1435000" />
+      <workItem from="1646055515638" duration="156000" />
+      <workItem from="1646138383934" duration="1711000" />
+      <workItem from="1646211481874" duration="694000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

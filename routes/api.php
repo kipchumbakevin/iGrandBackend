@@ -34,6 +34,10 @@ Route::group([
 Route::post('sendcode', 'CodesController@sendCode');
 Route::post('checkdetails', 'CodesController@checkDetails');
 
+//news
+Route::post('addnews', 'NewsController@addNews');
+Route::post('getnews', 'NewsController@getNews');
+
 //forgot password
 Route::post('check', 'ForgotPassword@checkIfExist');
 Route::post('forgotpassword', 'ForgotPassword@forgotPassword');
@@ -58,4 +62,4 @@ Route::get('getpod', 'PodcastController@fetchAll');
 //upload client details;
 Route::post('uploadPCli', 'ClientDocsController@doupload');
 //fetch client details
-Route::get('getdocs', 'fetchController@fetchAll');
+Route::post('getdocs', 'fetchController@fetchAll');

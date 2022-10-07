@@ -9,15 +9,11 @@ use Illuminate\Support\Facades\Auth;
 
 class fetchController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth:api');
-    }
+    
     public function fetchAll(Request $request)
     {
-        $user = User::where('id',Auth::guard('api')->user()->id)->first();
-        $m = $user->email;
-        $cli = ClientDocs::where('client_email',$m)->orderby('created_at', 'desc')->get();
+        
+        $cli = ClientDocs::where('client_email',$request->email)->orderby('created_at', 'desc')->get();
         return $cli;
     }
 }

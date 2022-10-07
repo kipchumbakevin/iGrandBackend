@@ -39,6 +39,7 @@ class PodcastController extends Controller
         $pod->title = $request->title;
         $pod->url =$filename;
         $pod->save();
+        return response()->json(['message'=>'Sucess'],201);
     }
     public function fetchAll(Request $request)
     {
