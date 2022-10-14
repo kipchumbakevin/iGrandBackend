@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
-use Illuminate\Http\Request;
-use Illuminate\Validation\ValidationException;
+use Cassandra\Exception\ValidationException;
+use http\Client\Request;
 
 class VideosController extends Controller
 {
@@ -18,7 +18,7 @@ class VideosController extends Controller
 
             ]);
         } catch (ValidationException $e) {
-            return response()->json(['message'=>'Not a video file']);
+            return $this->response()->json(['message'=>'Not a video file']);
         }
         $file = $request->file('slide');
         $destnation_path = public_path().'/videos';
@@ -37,4 +37,5 @@ class VideosController extends Controller
         $cli = Video::orderby('created_at', 'desc')->get();
         return $cli;
     }
+
 }
