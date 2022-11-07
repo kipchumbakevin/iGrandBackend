@@ -52,7 +52,7 @@ Route::post('changephone', 'ChangePassPhone@changePhone');
 //upload video
 Route::post('uploadVid', 'VideosController@doupload');
 //fetch video
-Route::get('getvid', 'VideosController@fetchAll');
+Route::post('getvid', 'VideosController@fetchAll');
 //upload magazine
 Route::post('uploadMag', 'MagazineController@doupload');
 //fetch magazines

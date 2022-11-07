@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="95f70ddb-76f8-49fe-95e0-f4b586120323" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MagazineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MagazineController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PodcastController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PodcastController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/VideosController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2020_12_14_063837_create_videos_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_12_14_063837_create_videos_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-    </list>
+    <list default="true" id="95f70ddb-76f8-49fe-95e0-f4b586120323" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -219,7 +210,7 @@
       <workItem from="1667462423366" duration="568000" />
       <workItem from="1667629781341" duration="5222000" />
       <workItem from="1667668033410" duration="1766000" />
-      <workItem from="1667810978798" duration="592000" />
+      <workItem from="1667810978798" duration="804000" />
     </task>
     <servers />
   </component>

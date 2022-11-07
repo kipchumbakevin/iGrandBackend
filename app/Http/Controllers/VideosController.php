@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Video;
 use Cassandra\Exception\ValidationException;
-use http\Client\Request;
+use Illuminate\Http\Request;
 
 class VideosController extends Controller
 {
