@@ -9,24 +9,20 @@ use Illuminate\Http\Request;
 class MagazineController extends Controller
 {
     public function doupload(Request $request){
-        $this->validate($request, [
-
-            'slide' => 'required|mimes:pdf|max:5000'
-            //mp4,ppx, ppt, pptx,pdf,ogv,jpg,webm
-            //'slide' => 'mimetypes:video/avi,video/mpeg,video/quicktime'
-
-        ]);
-        $file = $request->file('slide');
+        $image = $request->file('image');
+        $file = $request->file('magazine');
         $destnation_path = public_path().'/magazine';
-        $extension =$file->getClientOriginalExtension();
-        $files = $file->getClientOriginalName();
-        $filename = $files.'_'.time().'.'.$extension;
+        $filename = $file->getClientOriginalName();
+        $imagename = $image->getClientOriginalName();
         $file->move($destnation_path,$filename);
+        $image->move($destnation_path,$imagename);
         $pod = new Magazine();
-        $pod->title = $request->title;
-        $pod->url =$filename;
+        $pod->title = $filename;
+        $pod->imageurl = $imagename;
+        $pod->url = 'https://www.igrandsub.igrandbp.com/public/magazine/'.$filename;
         $pod->save();
-        return response()->json(['message'=>'Success'],201);
+        $this->sendNotification("Magazine Upload","A new magazine has been uploaded. Check it out");
+        return response()->json(['message'=>'success']);
     }
     public function fetchAll(Request $request)
     {

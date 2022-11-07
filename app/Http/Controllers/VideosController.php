@@ -27,14 +27,15 @@ class VideosController extends Controller
         $filename = $files.'_'.time().'.'.$extension;
         $file->move($destnation_path,$filename);
         $pod = new Video();
-        $pod->title = $request->title;
+        $pod->title = $request['title'];
+        $pod->type = $request['type'];
         $pod->url =$filename;
         $pod->save();
+        $this->sendNotification("Video Upload","A new video has been uploaded. Check it out");
     }
-
     public function fetchAll(Request $request)
     {
-        $cli = Video::orderby('created_at', 'desc')->get();
+        $cli = Video::where('type',$request['type'])->orderby('created_at', 'desc')->get();
         return $cli;
     }
 

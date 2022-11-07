@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Podcast;
+use App\Models\Feature;
 use Illuminate\Http\Request;
 
 class PodcastController extends Controller
@@ -15,34 +16,26 @@ class PodcastController extends Controller
 //            //'slide' => 'mimetypes:video/avi,video/mpeg,video/quicktime'
 //
 //        ]);
-//        if($request->hasFile('slide')){
-//            $filenameWithExt= $request->file('slide')->getClientOriginalName();
-//            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-//            $extension = $request->file('slide')->getClientOriginalExtension();
-//            $fileNameToStore = $filename. '_'.time().'.'.$extension;
-//            $path = $request->file('slide')->storeAs('public/magazine/',$fileNameToStore);
-//        }else{
-//            $fileNameToStore = 'novideo.jpg';
-//        }
-//        $filenameWithExt= $request->file('slide')->getClientOriginalName();
-//        $extension = $request->file('slide')->getClientOriginalExtension();
-//        $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-//        $fileNameToStore = $filename. '_'.time().'.'.$extension;
-//        $filenameWithExt->move(public_path().'/podcast/', $fileNameToStore);
-        $file = $request->file('slide');
+        $image = $request->file('image');
+        $file = $request->file('audio');
         $destnation_path = public_path().'/podcast';
-        $extension =$file->getClientOriginalExtension();
-        $files = $file->getClientOriginalName();
-        $filename = $files.'_'.time().'.'.$extension;
+        $filename = $file->getClientOriginalName();
+        $imagename = $image->getClientOriginalName();
         $file->move($destnation_path,$filename);
+        $image->move($destnation_path,$imagename);
         $pod = new Podcast();
         $pod->title = $request->title;
-        $pod->url =$filename;
+        $pod->imageurl = $imagename;
+        $pod->url ='https://igrandsub.igrandbp.com/public/podcast/'.$filename;
         $pod->save();
-        return response()->json(['message'=>'Sucess'],201);
+        $this->sendNotification("New Podcast","A new podcast has been published. Check it out");
+        return response()->json(['message'=>'success']);
     }
+
     public function fetchAll(Request $request)
     {
+        $latest = Podcast::orderby('created_at','desc')->first();
+        $id = $latest->id;
         $cli = Podcast::orderby('created_at', 'desc')->get();
         return $cli;
     }

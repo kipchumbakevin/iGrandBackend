@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\UsageStatistics\UsageStatisticsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,7 @@ Route::post('uploadMag', 'MagazineController@doupload');
 //fetch magazines
 Route::get('getmag', 'MagazineController@fetchAll');
 //upload podcast
+Route::get('getlatestfeature','VideosController@getLatest');
 Route::post('uploadPod', 'PodcastController@doupload');
 //fetch podcast
 Route::get('getpod', 'PodcastController@fetchAll');
@@ -64,3 +66,6 @@ Route::get('getpod', 'PodcastController@fetchAll');
 Route::post('uploadPCli', 'ClientDocsController@doupload');
 //fetch client details
 Route::post('getdocs', 'fetchController@fetchAll');
+
+//usage stats
+Route::post('createstat', [UsageStatisticsController::class,'insert']);
